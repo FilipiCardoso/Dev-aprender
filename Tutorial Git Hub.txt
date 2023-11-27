@@ -1,0 +1,46 @@
+Passos:
+1. git pull na branch principal
+2. Gerar uma nova branch a partir da principal
+3. Trabalhar e add novas funcionalidades na nova branch que criou
+4. Finalizar o trabalho na branch temporaria
+5. git checkout na principal
+6. git pull
+7. Mergiar (unir) o codigo da branch temporaria com a branch principal (depois testar)
+8. git push da branch principal
+
+git init - inicia o Git no projeto
+git status - informa o status do projeto e o que nao foi add
+git add "nome do arquivo" - adiciona arquivos ao controle de versao
+git add . - adiciona mais de um arquivo pendente
+git commit -m "indentificacao do commit" - prepara os arquivos a serem add
+git push - sobe os arquivos para o git
+git remote add origin https://github.com/FilipiCardoso/dev-aprender.git - cria link do git 
+com o PC
+git push --set-upstream origin master - comando do Git para fzr o push
+
+Voltar versao
+-------------
+
+git reflog - verifica as att (a versao mais atual é a do topo)
+git reset --hard id (esse id é dado no reflog) - volta para a versao desejada
+
+Criacao de branch
+git branch - Verifica as branchs disponiveis
+git branch nomedabranch - cria uma nova branch
+git checkout nomedabranch - muda para a branch desejada
+git checkout -b sistema-de-login master - cria uma nova branch a partir de uma existente
+aquino caso foi a master
+
+Unindo os codigos
+-----------------
+git merge nomedabranch - Une os codigos da branch desejada para a master
+ 
+Baixando arquivos do projeto
+----------------------------
+git pull - Baixa os arquivos
+
+Ignorando arquivos do projeto (nao subir)
+----------------------------
+touch .gitignore - cria o gitignore no projeto
+*Para nao subir arquivos indesejados devemos abrir o arquivo do ignore,
+colocar o caminho do arquivo e salvar. Ex: segredos/ (Pasta segredos)
